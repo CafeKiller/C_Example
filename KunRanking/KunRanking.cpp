@@ -3,9 +3,9 @@
 #define NAME_LEN  50 
 
 struct student {
-    int   sid; // Ñ§ºÅ
-    char  name[32]; // ĞÕÃû
-    float score; // ³É¼¨
+    int   sid; // å­¦å·
+    char  name[32]; // å§“å
+    float score; // æˆç»©
 };
 
 void inputStuInfo(int studNum, struct student stuTb[]);
@@ -19,14 +19,14 @@ int main()
 
     while (1)
     {
-        printf("==»¶Ó­Ê¹ÓÃÑ§Éú³É¼¨¹ÜÀíÏµÍ³==\n");
-        printf("ÇëÊäÈë°à¼¶Ñ§ÉúÊıÁ¿ (²»¿É³¬¹ı [%d] ,·ñÔòÒì³£): ", MAX_SIZE);
+        printf("==æ¬¢è¿ä½¿ç”¨å­¦ç”Ÿæˆç»©ç®¡ç†ç³»ç»Ÿ==\n");
+        printf("è¯·è¾“å…¥ç­çº§å­¦ç”Ÿæ•°é‡ (ä¸å¯è¶…è¿‡ [%d] ,å¦åˆ™å¼‚å¸¸): ", MAX_SIZE);
         scanf("%d", &studNum);
         printf("\n");
 
         if (studNum > MAX_SIZE)
         {
-            printf("[ERROR] Ñ§ÉúÊıÁ¿¹ı¶à,ÄÚ´æ²»×ã");
+            printf("[ERROR] å­¦ç”Ÿæ•°é‡è¿‡å¤š,å†…å­˜ä¸è¶³");
             return 1;
         }
 
@@ -41,22 +41,22 @@ int main()
 }
 
 /**
- * @desc: ÊäÈëÑ§ÉúĞÅÏ¢
- * @parma: studNum Ñ§ÉúÊıÁ¿
- * @parma: stuTb Ñ§Éú±í
+ * @desc: è¾“å…¥å­¦ç”Ÿä¿¡æ¯
+ * @parma: studNum å­¦ç”Ÿæ•°é‡
+ * @parma: stuTb å­¦ç”Ÿè¡¨
  * @data: 2023_10_27
 */
 void inputStuInfo(int studNum, struct student stuTb[]) {
-    printf("ÇëÊäÈë¸÷Î»Ñ§ÉúĞÅÏ¢: \n");
+    printf("è¯·è¾“å…¥å„ä½å­¦ç”Ÿä¿¡æ¯: \n");
     for (int i = 0; i < studNum; i++)
     {
-        printf("ÇëÊäÈëÑ§Éú³É¼¨: ");
+        printf("è¯·è¾“å…¥å­¦ç”Ÿæˆç»©: ");
         scanf_s("%f", &stuTb[i].score);
 
-        printf("ÇëÊäÈëÑ§ÉúÑ§ºÅ: ");
+        printf("è¯·è¾“å…¥å­¦ç”Ÿå­¦å·: ");
         scanf_s("%d", &stuTb[i].sid);
 
-        printf("ÇëÊäÈëÑ§ÉúĞÕÃû: ");
+        printf("è¯·è¾“å…¥å­¦ç”Ÿå§“å: ");
         scanf_s("%s", &stuTb[i].name, NAME_LEN);
 
         printf("\n");
@@ -64,13 +64,13 @@ void inputStuInfo(int studNum, struct student stuTb[]) {
 }
 
 /**
- * @desc: ¼ÆËã²¢Êä³öÅÅÃû(´Ó¸ßÖÁµÍ)
- * @parma: studNum Ñ§ÉúÊıÁ¿
- * @parma: stuTb Ñ§Éú±í
+ * @desc: è®¡ç®—å¹¶è¾“å‡ºæ’å(ä»é«˜è‡³ä½)
+ * @parma: studNum å­¦ç”Ÿæ•°é‡
+ * @parma: stuTb å­¦ç”Ÿè¡¨
  * @data: 2023_10_27
 */
 void ranking(int studNum, struct student stuTb[]) {
-    struct student temp; // ÁÙÊ±±äÁ¿,ÓÃÓÚ½»»»
+    struct student temp; // ä¸´æ—¶å˜é‡,ç”¨äºäº¤æ¢
     int i, j;
     for (i = 0; i < studNum - 1; i++)
     {
@@ -84,8 +84,8 @@ void ranking(int studNum, struct student stuTb[]) {
             }
         }
     }
-    printf("³É¼¨ÅÅÃûÎª£º\n");
-    printf("\t \t Ñ§ºÅ \t ĞÕÃû\t ³É¼¨\n");
+    printf("æˆç»©æ’åä¸ºï¼š\n");
+    printf("\t \t å­¦å· \t å§“å\t æˆç»©\n");
     for (i = 0; i < studNum; i++)
     {
         printf("\t \t %d\t %s\t %0.2f\n", stuTb[i].sid, stuTb[i].name, stuTb[i].score);

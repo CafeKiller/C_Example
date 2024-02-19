@@ -13,7 +13,7 @@ void hexToBinary(char hex[]);
 void hexToDec(char hex[]);
 
 /**
- * @file: ½øÖÆ×ª»»³ÌĞò
+ * @file: è¿›åˆ¶è½¬æ¢ç¨‹åº
  * @data: 2023_10_27 13:51:58
  * */ 
 
@@ -21,27 +21,27 @@ int main(){
 
 	int modelNum = 0;
 
-    printf("#############[RULE] ¹æ·¶ËµÃ÷ ################ \n");
-	printf("¶ş½øÖÆµÄ·¶Î§ÔÚ0-1111111111 \n");
-	printf("Ê®½øÖÆµÄ·¶Î§ÔÚ0-1023 \n");
-	printf("Ê®Áù½øÖÆµÄ·¶Î§ÔÚ0-3FF \n");
-	printf("³¬³ö·¶Î§»ò²»ÕıÈ·µÄÖµ»á³öbug!!! \n");
+    printf("#############[RULE] è§„èŒƒè¯´æ˜ ################ \n");
+	printf("äºŒè¿›åˆ¶çš„èŒƒå›´åœ¨0-1111111111 \n");
+	printf("åè¿›åˆ¶çš„èŒƒå›´åœ¨0-1023 \n");
+	printf("åå…­è¿›åˆ¶çš„èŒƒå›´åœ¨0-3FF \n");
+	printf("è¶…å‡ºèŒƒå›´æˆ–ä¸æ­£ç¡®çš„å€¼ä¼šå‡ºbug!!! \n");
 
-	printf("#############ÊäÈëÄ£Ê½¹æÔò################ \n");
+	printf("#############è¾“å…¥æ¨¡å¼è§„åˆ™################ \n");
 	
-	printf("¶ş½øÖÆÄ£Ê½ÊäÈë: 1 \n");
-	printf("Ê®½øÖÆÄ£Ê½ÊäÈë: 2 \n");
-	printf("Ê®Áù½øÖÆÄ£Ê½ÊäÈë: 3 \n");
+	printf("äºŒè¿›åˆ¶æ¨¡å¼è¾“å…¥: 1 \n");
+	printf("åè¿›åˆ¶æ¨¡å¼è¾“å…¥: 2 \n");
+	printf("åå…­è¿›åˆ¶æ¨¡å¼è¾“å…¥: 3 \n");
 
 	int input = 0;
 	while(1){
-		printf("ÇëÊäÈëÄãĞèÒªÊ¹ÓÃÄ£Ê½: ");
+		printf("è¯·è¾“å…¥ä½ éœ€è¦ä½¿ç”¨æ¨¡å¼: ");
 		scanf("%d", &modelNum);
         printf("\n");
 		switch(modelNum)
         {
 			case 1:
-				printf("ÇëÊäÈëÒ»¸ö¶ş½øÖÆµÄÖµ: ");
+				printf("è¯·è¾“å…¥ä¸€ä¸ªäºŒè¿›åˆ¶çš„å€¼: ");
                 scanf("%d", &input);
 
                 printf("\n");
@@ -53,7 +53,7 @@ int main(){
                 printf("\n############################# \n");
 				break;
             case 2:
-				printf("ÇëÊäÈëÒ»¸öÊ®½øÖÆµÄÖµ: ");
+				printf("è¯·è¾“å…¥ä¸€ä¸ªåè¿›åˆ¶çš„å€¼: ");
                 scanf("%d", &input);
 
                 printf("\n");
@@ -65,7 +65,7 @@ int main(){
                 printf("\n############################# \n");
                 break;
             case 3:
-                printf("ÇëÊäÈëÒ»¸öÊ®Áù½øÖÆµÄÖµ: ");
+                printf("è¯·è¾“å…¥ä¸€ä¸ªåå…­è¿›åˆ¶çš„å€¼: ");
                 char hex[32];
                 scanf("%s", hex);
 
@@ -79,7 +79,7 @@ int main(){
                 break;
             default:
                 printf("\n");
-                printf("[Error] ÇëÊäÈëÕıÈ·µÄÄ£Ê½¶ÔÓ¦µÄÊı×Ö\n");
+                printf("[Error] è¯·è¾“å…¥æ­£ç¡®çš„æ¨¡å¼å¯¹åº”çš„æ•°å­—\n");
                 printf("\n");
 		}
        
@@ -88,8 +88,8 @@ int main(){
 }
 
 /**
- * @desc: ¶ş¼¶ÖÆ×ªÊ®Áù½øÖÆ
- * @parma: binary ¶ş½øÖÆÕûÊı
+ * @desc: äºŒçº§åˆ¶è½¬åå…­è¿›åˆ¶
+ * @parma: binary äºŒè¿›åˆ¶æ•´æ•°
  * @data: 2023_10_27
 */
 void binaryToHex(int binary)
@@ -106,8 +106,8 @@ void binaryToHex(int binary)
 }
 
 /**
- * @desc: ¶ş½øÖÆ×ªÊ®½øÖÆ
- * @parma: binary ¶ş½øÖÆÕûÊı
+ * @desc: äºŒè¿›åˆ¶è½¬åè¿›åˆ¶
+ * @parma: binary äºŒè¿›åˆ¶æ•´æ•°
  * @data: 2023_10_27
 */
 void binaryToDec(int binary)
@@ -120,18 +120,18 @@ void binaryToDec(int binary)
         sum += m*pow(2, i);
         ++i;
     }
-    printf("[SUCCESS]µÃ³öÊ®Áù½øÖÆ: %d", sum);
+    printf("[SUCCESS]å¾—å‡ºåå…­è¿›åˆ¶: %d", sum);
     
 }
 
 /**
- * @desc: Ê®½øÖÆ×ª¶ş½øÖÆ
- * @parma: dec Ê®½øÖÆÕûÊı
+ * @desc: åè¿›åˆ¶è½¬äºŒè¿›åˆ¶
+ * @parma: dec åè¿›åˆ¶æ•´æ•°
  * @data: 2023_10_27
 */
 void decToBinary(int dec){
     int result = 0;
-    int y, x = 1; // y±íÊ¾ÓàÊı£¬xÎªµş¼ÓµÄÏµÊı
+    int y, x = 1; // yè¡¨ç¤ºä½™æ•°ï¼Œxä¸ºå åŠ çš„ç³»æ•°
     while (dec != 0)
     {
         y = dec % 2;
@@ -139,39 +139,39 @@ void decToBinary(int dec){
         x *= 10;
         dec /= 2;
     }
-    printf("[SUCCESS]µÃ³ö¶ş½øÖÆ: %d", result);
+    printf("[SUCCESS]å¾—å‡ºäºŒè¿›åˆ¶: %d", result);
 }
 
 /**
- * @desc: Ê®½øÖÆ×ªÊ®Áù½øÖÆ
- * @parma: dec Ê®½øÖÆÕûÊı
+ * @desc: åè¿›åˆ¶è½¬åå…­è¿›åˆ¶
+ * @parma: dec åè¿›åˆ¶æ•´æ•°
  * @data: 2023_10_27
 */
 void decToHex(int dec){
     char  buffer [64];
     sprintf (buffer,  "%x" , dec);
-    printf("[SUCCESS]µÃ³öÊ®Áù½øÖÆ: %s", buffer);
+    printf("[SUCCESS]å¾—å‡ºåå…­è¿›åˆ¶: %s", buffer);
 }
 
 /**
- * @desc: Ê®Áù½øÖÆ×ª¶ş½øÖÆ
- * @parma: dec Ê®Áù½øÖÆ×Ö·û´®
+ * @desc: åå…­è¿›åˆ¶è½¬äºŒè¿›åˆ¶
+ * @parma: dec åå…­è¿›åˆ¶å­—ç¬¦ä¸²
  * @data: 2023_10_27
 */
 void hexToBinary(char hex[]){
     int result = 0;
     result = strtol(hex, NULL, 16);
-    // µ÷ÓÃÊ®½øÖÆ×ª¶ş½øÖÆº¯Êı decToBinary
+    // è°ƒç”¨åè¿›åˆ¶è½¬äºŒè¿›åˆ¶å‡½æ•° decToBinary
     decToBinary(result);
 }
 
 /**
- * @desc: Ê®Áù½øÖÆ×ªÊ®½øÖÆ
- * @parma: dec Ê®Áù½øÖÆ×Ö·û´®
+ * @desc: åå…­è¿›åˆ¶è½¬åè¿›åˆ¶
+ * @parma: dec åå…­è¿›åˆ¶å­—ç¬¦ä¸²
  * @data: 2023_10_27
 */
 void hexToDec(char hex[]){
     int result = 0;
     result = strtol(hex, NULL, 16);
-    printf("[SUCCESS]µÃ³öÊ®Áù½øÖÆ: %d", result);
+    printf("[SUCCESS]å¾—å‡ºåå…­è¿›åˆ¶: %d", result);
 }

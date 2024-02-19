@@ -6,81 +6,81 @@ int menuSelect(int selectNum);
 int main()
 {
     printf("\n############################# \n");
-    printf("--|²Ëµ¥|-- \n");
-    printf("--|1.ÏãÀ±¼¦ÍÈÖĞ¹úºº±¤: 12Ôª|-- \n");
-    printf("--|2.°åÉÕ·ïÀæÖĞ¹úºº±¤: 17Ôª|-- \n");
-    printf("--|3.±±¾©¿¾Ñ¼ÖĞ¹úºº±¤: 18Ôª|-- \n");
-    printf("--|4.ËşËş·çÎ¶ÄÌ: 8Ôª|-- \n");
-    printf("--|5.±ùÄû¿ÉÀÖ: 6Ôª|-- \n");
+    printf("--|èœå•|-- \n");
+    printf("--|1.é¦™è¾£é¸¡è…¿ä¸­å›½æ±‰å ¡: 12å…ƒ|-- \n");
+    printf("--|2.æ¿çƒ§å‡¤æ¢¨ä¸­å›½æ±‰å ¡: 17å…ƒ|-- \n");
+    printf("--|3.åŒ—äº¬çƒ¤é¸­ä¸­å›½æ±‰å ¡: 18å…ƒ|-- \n");
+    printf("--|4.å¡”å¡”é£å‘³å¥¶: 8å…ƒ|-- \n");
+    printf("--|5.å†°æŸ å¯ä¹: 6å…ƒ|-- \n");
     printf("\n############################# \n");
 
     int model = 0, total = 0, menuSelectNum = 0;
 
     while (1)
     {
-        printf("»¶Ó­Ê¹ÓÃ[TastienSystem], µãµ¥·şÎñ(1), ½áÕË·şÎñ(2), ÇëÊäÈë: ");
+        printf("æ¬¢è¿ä½¿ç”¨[TastienSystem], ç‚¹å•æœåŠ¡(1), ç»“è´¦æœåŠ¡(2), è¯·è¾“å…¥: ");
         scanf("%d", &model);
         if (model == 1)
         {
-            printf("\nÇëÊäÈë²Ëµ¥ÖĞµÄĞòºÅ,½øĞĞµãµ¥: ");
+            printf("\nè¯·è¾“å…¥èœå•ä¸­çš„åºå·,è¿›è¡Œç‚¹å•: ");
             scanf("%d", &menuSelectNum);
             printf("\n");
             total += menuSelect(menuSelectNum);
         } else if(model == 2) {
-            printf("\n[SUCCESS] µãµ¥½áÊø,½áËã: ÄãÒ»¹²µãÁË:[ %d ]Ôª\n", total);
+            printf("\n[SUCCESS] ç‚¹å•ç»“æŸ,ç»“ç®—: ä½ ä¸€å…±ç‚¹äº†:[ %d ]å…ƒ\n", total);
             printf("\n");
             total = 0;
         } else {
-            printf("\n[ERROR] ÊäÈë²ÎÊıÓĞÎó,ÇëÖØĞÂÊäÈë!!!! \n");
+            printf("\n[ERROR] è¾“å…¥å‚æ•°æœ‰è¯¯,è¯·é‡æ–°è¾“å…¥!!!! \n");
         }
         
     }
-    printf("»¶Ó­ÏÂ´Î¹âÁÙ");
+    printf("æ¬¢è¿ä¸‹æ¬¡å…‰ä¸´");
     return 0;
 }
 
 /**
- * @desc: ¼Û¸ñ¼ÆËã
- * @parma: price ²ËÆ·µ¥¼Û
+ * @desc: ä»·æ ¼è®¡ç®—
+ * @parma: price èœå“å•ä»·
  * @data: 2023_10_27
 */
 int priceCompute(int price){
     int num = 1;
-    printf("[INFO] ÇëÎÊÄãĞèÒª¼¸·İÄØ, ÇëÊäÈë·İÁ¿: ");
+    printf("[INFO] è¯·é—®ä½ éœ€è¦å‡ ä»½å‘¢, è¯·è¾“å…¥ä»½é‡: ");
     scanf("%d", &num);
     printf("\n");
     return price * num;
 }
 
 /**
- * @desc: ²Ëµ¥Ñ¡Ôñ
- * @parma: selectNum ²Ëµ¥ÖĞ²ËÆ·µÄĞòºÅ
+ * @desc: èœå•é€‰æ‹©
+ * @parma: selectNum èœå•ä¸­èœå“çš„åºå·
  * @data: 2023_10_27
 */
 int menuSelect(int selectNum){
     switch(selectNum){
         case 1:
-            printf("[INFO] ÄúÑ¡ÔñµÄÊÇ: [1]ÏãÀ±¼¦ÍÈÖĞ¹úºº±¤, µ¥¼Û12Ôª\n");
+            printf("[INFO] æ‚¨é€‰æ‹©çš„æ˜¯: [1]é¦™è¾£é¸¡è…¿ä¸­å›½æ±‰å ¡, å•ä»·12å…ƒ\n");
             return priceCompute(12);
             break;
         case 2:
-            printf("[INFO] ÄúÑ¡ÔñµÄÊÇ: [2]°åÉÕ·ïÀæÖĞ¹úºº±¤, µ¥¼Û17Ôª\n");
+            printf("[INFO] æ‚¨é€‰æ‹©çš„æ˜¯: [2]æ¿çƒ§å‡¤æ¢¨ä¸­å›½æ±‰å ¡, å•ä»·17å…ƒ\n");
             return priceCompute(17);
             break;
         case 3:
-            printf("[INFO] ÄúÑ¡ÔñµÄÊÇ: [3]±±¾©¿¾Ñ¼ÖĞ¹úºº±¤, µ¥¼Û18Ôª\n");
+            printf("[INFO] æ‚¨é€‰æ‹©çš„æ˜¯: [3]åŒ—äº¬çƒ¤é¸­ä¸­å›½æ±‰å ¡, å•ä»·18å…ƒ\n");
             return priceCompute(18);
             break;
         case 4:
-            printf("[INFO] ÄúÑ¡ÔñµÄÊÇ: [4]ËşËş·çÎ¶ÄÌ, µ¥¼Û8Ôª\n");
+            printf("[INFO] æ‚¨é€‰æ‹©çš„æ˜¯: [4]å¡”å¡”é£å‘³å¥¶, å•ä»·8å…ƒ\n");
             return priceCompute(8);
             break;
         case 5:
-            printf("[INFO] ÄúÑ¡ÔñµÄÊÇ: [5]±ùÄû¿ÉÀÖ, µ¥¼Û6Ôª\n");
+            printf("[INFO] æ‚¨é€‰æ‹©çš„æ˜¯: [5]å†°æŸ å¯ä¹, å•ä»·6å…ƒ\n");
             return priceCompute(6);
             break;
         default:
-            printf("[ERROR] ÄúÑ¡ÔñµÄÕâ¸öĞòºÅ²»´æÔÚÌ×²ÍÇëÖØĞÂÑ¡Ôñ\n");
+            printf("[ERROR] æ‚¨é€‰æ‹©çš„è¿™ä¸ªåºå·ä¸å­˜åœ¨å¥—é¤è¯·é‡æ–°é€‰æ‹©\n");
             return 0;
     }
 }

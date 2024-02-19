@@ -41,10 +41,10 @@ int main()
 }
 
 /// <summary>
-///		仿strcopy, 自定义字符交换
+///		??strcopy, ????????????
 /// </summary>
-/// <param name="dest">输入字符</param>
-/// <param name="src">输出字符</param>
+/// <param name="dest">???????</param>
+/// <param name="src">??????</param>
 void _strcooy_(char* dest, char* src) {
 
 	while (*src)
